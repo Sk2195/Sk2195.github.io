@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+nav {
+   overflow: hidden;
+   background-color: rgb(2, 161, 127);
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a {
+   float: left;
+   font-size: 16px;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+.dropdown {
+   float: left;
+   overflow: hidden;
+}
+.dropdown .megaButton {
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color: white;
+   padding: 14px 16px;
+   background-color: inherit;
+   font: inherit;
+   margin: 0;
+}
+nav a:hover, .dropdown:hover .megaButton {
+   background-color: rgb(0, 63, 146);
+}
+.megaContent {
+   text-align: center;
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   width: 100%;
+   left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+}
+.megaContent .megaHeader {
+   background: rgb(119, 6, 194);
+   padding: 16px;
+   color: white;
+}
+.dropdown:hover .megaContent {
+   display: block;
+}
+.megaColumn {
+   float: left;
+   width: 33%;
+   padding: 10px;
+   background-color: rgb(233, 255, 198);
+   height: 250px;
+}
+.megaColumn .links {
+   float: none;
+   color: black;
+   padding: 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+   border-bottom: 4px solid rgb(69, 0, 90);
+}
+.megaColumn a:hover {
+   background-color: lightblue;
+}
+/*Float reset trick for clearing floats*/
+.megaRow:after {
+   content: "";
+   display: table;
+   clear: both;
+}
