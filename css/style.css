@@ -1,81 +1,140 @@
-* {
-  box-sizing: border-box;
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7A5CFF;
+    font-family: Arial, sans-serif;
 }
 
-body {
-  margin: 0;
-}
 nav {
-   overflow: hidden;
-   background-color: rgb(2, 161, 127);
-   font-family: Arial, Helvetica, sans-serif;
+    background-color: #7A5CFF;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, left 0.3s ease;
+    z-index: 1000;
 }
 
-nav a {
-   float: left;
-   font-size: 16px;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
+nav:hover, nav:focus {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
 }
-.dropdown {
-   float: left;
-   overflow: hidden;
+
+.menu-header {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #7A5CFF;
 }
-.dropdown .megaButton {
-   font-size: 16px;
-   border: none;
-   outline: none;
-   color: white;
-   padding: 14px 16px;
-   background-color: inherit;
-   font: inherit;
-   margin: 0;
+
+.menu-header h2 {
+    margin: 0;
 }
-nav a:hover, .dropdown:hover .megaButton {
-   background-color: rgb(0, 63, 146);
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.megaContent {
-   text-align: center;
-   display: none;
-   position: absolute;
-   background-color: #f9f9f9;
-   width: 100%;
-   left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   z-index: 1;
+
+.menu-item {
+    border-bottom: 1px solid #7A5CFF;
+    position: relative;
 }
-.megaContent .megaHeader {
-   background: rgb(119, 6, 194);
-   padding: 16px;
-   color: white;
+
+.menu-item:last-child {
+    border-bottom: none;
 }
-.dropdown:hover .megaContent {
-   display: block;
+
+.menu-link {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
-.megaColumn {
-   float: left;
-   width: 33%;
-   padding: 10px;
-   background-color: rgb(233, 255, 198);
-   height: 250px;
+
+.menu-link:hover,
+.menu-item:hover .menu-link {
+    background-color: #946EFF;
 }
-.megaColumn .links {
-   float: none;
-   color: black;
-   padding: 16px;
-   text-decoration: none;
-   display: block;
-   text-align: left;
-   border-bottom: 4px solid rgb(69, 0, 90);
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #7A5CFF;
+    border: 1px solid #7A5CFF;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1002;
 }
-.megaColumn a:hover {
-   background-color: lightblue;
+
+.submenu-link {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
 }
-/*Float reset trick for clearing floats*/
-.megaRow:after {
-   content: "";
-   display: table;
-   clear: both;
+
+.submenu-link:hover {
+    background-color: #7A5CFF;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.footer {
+    background-color: #7A5CFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#spline-container {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#menu-toggle:checked + .menu-icon {
+    left: 250px;
+}
+
+#menu-toggle:checked ~ nav {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
 }
