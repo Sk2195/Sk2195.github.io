@@ -29,22 +29,30 @@
 
 .container {
     display: flex;
-    justify-content: space-between; /* Distribute items evenly with space between them */
-    align-items: center; /* Vertically center items */
-    height: 100vh;
-    padding: 20px; /* Add padding around the container */
+    flex-direction: row;
+    justify-content: flex-end; /* Align items to the end of the container */
+    align-items: flex-start;
+    width: 80%;
+    max-width: 1140px;
+    margin-top: 20px; /* Separate header from container */
 }
 
+
 .about-image {
-    flex: 0 0 auto; /* Do not grow, do not shrink, initial size based on content */
     width: 40%; /* Adjust width as needed */
     max-width: 300px; /* Adjust maximum width as needed */
+    height: auto;
+    margin-right: 20px; /* Space between image and description */
 }
 
 .about-content {
-    flex: 1; /* Grow to fill remaining space */
-    text-align: right; /* Align content to the right */
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    margin-left: auto; /* Push description all the way to the right */
 }
+
+        
 .about-text {
     color: #333;
 }
