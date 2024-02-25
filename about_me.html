@@ -3,75 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shnehi Karki's Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-       body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Gradient background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #FFFFFF;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Gradient background */
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-.about-section {
-    display: flex; /* This ensures a horizontal layout */
-    flex-direction: row; /* Explicitly setting the direction to row */
-    width: 80%; /* Adjust width as needed */
-    max-width: 1140px; /* Maximum width of the content area */
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Shadow for depth */
-}
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1140px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
 
-.about-image {
-    flex: 0 0 40%; /* Image takes up 40% of the container */
-    background: url('image/avatar.png') no-repeat center center;
-    background-size: cover;
-}
+        .about-image {
+            flex: 0 0 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.about-content {
-    flex: 0 0 60%; /* Content takes up the remaining 60% */
-    background: #ffffff; /* White background for readability */
-    padding: 40px;
-}
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+        }
 
-/* Rest of your styles... */
+        .about-content {
+            flex: 0 0 60%;
+            background: #ffffff;
+            color: #333;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
+        .about-title {
+            background: linear-gradient(to right, #7A5CFF, #00D2FF);
+            color: #FFFFFF;
+            padding: 20px;
+            margin: -40px -40px 20px -40px;
+        }
 
-.about-title {
-    background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Title background gradient */
-    color: #FFFFFF;
-    padding: 20px;
-    margin: -40px -40px 20px -40px; /* Adjust space around the title */
-}
-
-.about-text {
-    color: #333; /* Dark text for readability */
-}
-
+        .about-text {
+            color: #333;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-       <img src="image/avatar.png" alt="Profile Picture" class="profile-img">
-       <div class="about-text">
-        <h2>About</h2>
+    <div class="about-image">
+        <img src="image/avatar.png" alt="Profile Picture">
+    </div>
+    <div class="about-content">
+        <div class="about-title">
+            <h2>About Me</h2>
         </div>
         <div class="about-text">
-            <p>Welcome! I'm Shnehi Karki, a dynamic Data Geek with a passion for unraveling insights that drive strategic decision-making. Much like the legendary detective Sherlock Holmes, I thrive on solving puzzles and uncovering hidden gems within complex datasets.</p>
-            <p>Holding a Master of Science in Data Analytics from Southern New Hampshire University, coupled with undergraduate degrees in Information Technology and Biology from the University of Massachusetts at Lowell and the University of Southern Maine respectively, my academic foundation is both rich and varied. Presently, I'm deeply involved in an AI innovation challenge through Omdena, aimed at addressing deforestation in the Congo Basin through the application of machine learning techniques. In parallel, I am spearheading a project dedicated to integrating the life-extending principles of Blue Zones into U.S. counties, endeavoring to enhance community longevity with strategic, data-informed approaches.</p>
-            <p>As a Data Geek, I have explored the complexities of SQL queries and the capabilities of Excel pivot tables to uncover meaningful trends and patterns. My ability to transform data into visually compelling and informative reports has proven valuable to senior management in making strategic decisions. I have led data analysis projects, delivering practical insights that have influenced business decisions and improved products.</p>
-            <p>In my spare time, I am enthusiastic about artificial intelligence (AI) and regularly partner with teams across disciplines to implement AI solutions that improve processes and increase productivity. As a Junior Machine Learning Engineer at Omdena, I contribute to projects that leverage AI and machine learning to tackle real-world issues and bring about positive changes.</p>
-            <p>Much like Sherlock Holmes, I believe in the power of observation and deduction to unlock valuable insights. I approach each dataset as a mystery waiting to be solved, meticulously piecing together clues to uncover the truth hidden within the numbers.</p>
-            <p>With a strong foundation in data analytics, a commitment to continuous learning, and a passion for making a difference, I'm eager to bring my unique blend of analytical skills and Sherlock Holmes-inspired problem-solving to a role where I can contribute meaningfully to solving complex problems and driving innovation through data-driven approaches.</p>
+            <p>
+                Here is where you'll add the paragraph about yourself. This is the place to share your story, talk about your professional background, your skills, and your passions. Be sure to make it engaging and informative to capture the attention of your audience.
+            </p>
+            <!-- You can add more paragraphs or elements as needed -->
         </div>
     </div>
 </div>
 
 </body>
 </html>
-
