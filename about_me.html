@@ -10,55 +10,53 @@
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Gradient background */
+    background: linear-gradient(to right, #7A5CFF, #00D2FF);
     color: #FFFFFF;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    text-align: center; /* Center text for the header */
 }
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%; /* Two columns layout */
+    grid-template-rows: auto 1fr; /* The header row and the content row */
     width: 80%;
     max-width: 1140px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    align-items: stretch; /* Stretch items to fill the container */
-    gap: 20px; /* This creates a gap between the image and the text */
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    gap: 20px; /* Space between the image and the text */
 }
 
 .about-image {
-    flex: 1; /* Allow the image to fill the flex container */
-    display: flex;
-    align-items: stretch; /* Stretch to fill the height of the container */
-}
-
-.about-image img {
-    width: 100%; /* Full width of its container */
-    height: 100%; /* Full height of its container */
-    object-fit: cover; /* Cover the container without stretching the image */
-}
-
-.about-content {
-    flex: 1; /* Allow the text content to fill the remaining space */
-    background: #ffffff;
-    color: #333;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Align content to the start */
+    grid-row: 1 / span 2; /* The image spans two rows */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .about-title {
-    background: linear-gradient(to right, #7A5CFF, #00D2FF);
+    grid-column: 1 / -1; /* The title spans all columns */
+    background: #7A5CFF;
     color: #FFFFFF;
     padding: 20px;
-    margin: 0 -40px; /* Maintain the gradient background edge to edge */
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+.about-content {
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .about-text {
     color: #333;
 }
+
 
 
     </style>
