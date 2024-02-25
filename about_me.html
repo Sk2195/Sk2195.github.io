@@ -7,57 +7,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Gradient background */
-            color: #FFFFFF;
-            display: flex;
-            justify-content: right;
-            align-items: right;
-            height: 100vh;
-        }
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Gradient background */
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+}
 
-        .container {
-            display: flex;
-            width: 80%;
-            max-width: 1140px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-            align-items: flex-start; /* Align items to the start of the cross axis */
-        }
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1140px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    align-items: stretch; /* Stretch items to fill the container */
+    gap: 20px; /* This creates a gap between the image and the text */
+}
 
-        .about-image {
-            flex: 0 0 40%;
-            display: flex;
-            justify-content: right;
-            align-items: right;
-        }
+.about-image {
+    flex: 1; /* Allow the image to fill the flex container */
+    display: flex;
+    align-items: stretch; /* Stretch to fill the height of the container */
+}
 
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-        }
+.about-image img {
+    width: 100%; /* Full width of its container */
+    height: 100%; /* Full height of its container */
+    object-fit: cover; /* Cover the container without stretching the image */
+}
 
-        .about-content {
-            flex: 0 0 60%;
-            background: #ffffff;
-            color: #333;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: right;
-        }
+.about-content {
+    flex: 1; /* Allow the text content to fill the remaining space */
+    background: #ffffff;
+    color: #333;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the start */
+}
 
-        .about-title {
-            background: linear-gradient(to right, #7A5CFF, #00D2FF);
-            color: #FFFFFF;
-            padding: 20px;
-            margin: -40px -40px 20px -40px;
-        }
+.about-title {
+    background: linear-gradient(to right, #7A5CFF, #00D2FF);
+    color: #FFFFFF;
+    padding: 20px;
+    margin: 0 -40px; /* Maintain the gradient background edge to edge */
+}
 
-        .about-text {
-            color: #333;
-        }
+.about-text {
+    color: #333;
+}
+
     </style>
 </head>
 <body>
