@@ -30,7 +30,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; /* Align items to the end of the container */
+    justify-content: space-between; /* Distribute items evenly with space between them */
     align-items: flex-start;
     width: 80%;
     max-width: 1140px;
@@ -38,12 +38,14 @@
 }
 
 .about-image {
-    width: 100%;
-    max-width: 300px; /* Adjust as needed */
+    max-width: 40%; /* Adjust as needed */
     height: auto;
-    margin-left: 0px; /* Space between image and text */
 }
 
+.about-content {
+    max-width: 58%; /* Adjust as needed */
+    text-align: right; /* Align content to the right */
+}
 .about-content {
     background: #ffffff;
     color: #333;
