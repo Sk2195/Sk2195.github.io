@@ -19,27 +19,27 @@
 }
 
 .about-section {
-    display: flex;
+    display: flex; /* This ensures a horizontal layout */
+    flex-direction: row; /* Explicitly setting the direction to row */
     width: 80%; /* Adjust width as needed */
     max-width: 1140px; /* Maximum width of the content area */
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Shadow for depth */
-    flex-wrap: nowrap; /* Prevent items from wrapping */
 }
 
 .about-image {
-    flex: 0 0 40%; /* Image takes up 40% of the container, flex-grow is 0, flex-shrink is 0 */
+    flex: 0 0 40%; /* Image takes up 40% of the container */
     background: url('image/avatar.png') no-repeat center center;
     background-size: cover;
 }
 
 .about-content {
-    flex: 0 0 60%; /* Content takes up the remaining 60%, flex-grow is 0, flex-shrink is 0 */
+    flex: 0 0 60%; /* Content takes up the remaining 60% */
     background: #ffffff; /* White background for readability */
     padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
+
+/* Rest of your styles... */
+
 
 .about-title {
     background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Title background gradient */
