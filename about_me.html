@@ -6,64 +6,52 @@
     <title>Shnehi Karki's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Gradient background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #FFFFFF;
-        }
-        .about-section {
-        display: flex;
-        width: 80%; /* Adjust width as needed */
-       max-width: 1140px; /* Maximum width of the content area */
-       box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Shadow for depth */
-      flex-wrap: nowrap; /* Prevent items from wrapping */
+       body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFFFFF;
 }
-         .about-image {
-            flex-basis: 40%; /* Image takes up 40% of the container */
-            background: url('image/avatar.png') no-repeat center center;
-            background-size: cover;
-        }
-        .about-content {
-            flex-basis: 60%; /* Content takes up the remaining 60% */
-            background: #ffffff; /* White background for readability */
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .about-title {
-            background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Title background gradient */
-            color: #FFFFFF;
-            padding: 20px;
-            margin: -40px;
-            margin-bottom: 20px; /* Adjust space between title and paragraph */
-        }
-        .about-text {
-            color: #333; /* Dark text for readability */
-        }
-        .social-links {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .social-links li {
-            display: inline;
-            margin: 0 10px;
-        }
-        .social-links a {
-            color: #333;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            color: #7A5CFF;
-        }
+
+.about-section {
+    display: flex;
+    width: 80%; /* Adjust width as needed */
+    max-width: 1140px; /* Maximum width of the content area */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Shadow for depth */
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+}
+
+.about-image {
+    flex: 0 0 40%; /* Image takes up 40% of the container, flex-grow is 0, flex-shrink is 0 */
+    background: url('image/avatar.png') no-repeat center center;
+    background-size: cover;
+}
+
+.about-content {
+    flex: 0 0 60%; /* Content takes up the remaining 60%, flex-grow is 0, flex-shrink is 0 */
+    background: #ffffff; /* White background for readability */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-title {
+    background: linear-gradient(to right, #7A5CFF, #00D2FF); /* Title background gradient */
+    color: #FFFFFF;
+    padding: 20px;
+    margin: -40px -40px 20px -40px; /* Adjust space around the title */
+}
+
+.about-text {
+    color: #333; /* Dark text for readability */
+}
+
     </style>
 </head>
 <body>
@@ -81,12 +69,6 @@
             <p>Much like Sherlock Holmes, I believe in the power of observation and deduction to unlock valuable insights. I approach each dataset as a mystery waiting to be solved, meticulously piecing together clues to uncover the truth hidden within the numbers.</p>
             <p>With a strong foundation in data analytics, a commitment to continuous learning, and a passion for making a difference, I'm eager to bring my unique blend of analytical skills and Sherlock Holmes-inspired problem-solving to a role where I can contribute meaningfully to solving complex problems and driving innovation through data-driven approaches.</p>
         </div>
-        <ul class="social-links">
-            <li><a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="mailto:your-email@example.com"><i class="fa fa-envelope"></i></a></li>
-        </ul>
     </div>
 </div>
 
