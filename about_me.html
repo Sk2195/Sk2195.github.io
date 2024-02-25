@@ -34,8 +34,8 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    align-items: flex-start; /* Align items to the start of the container */
+    justify-content: space-between; /* Space items evenly */
     width: 80%;
     max-width: 1140px;
     margin-top: 20px; /* Separate header from container */
@@ -46,18 +46,17 @@
     max-width: 300px; /* Adjust maximum width as needed */
     height: auto;
     margin-right: 20px; /* Add margin to create space between image and description */
-
 }
-
 
 .about-content {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     color: #333;
-    padding: 60px;
-    width: 100%; /* Cover the entire width of the container */
+    padding: 20px;
+    width: calc(60% - 20px); /* Adjust width to leave space for the image */
     max-width: 800px; /* Limit the maximum width */
     text-align: justify; /* Justify text */
-    align-self: flex-start; /* Align the description to the top */
+}
+
   
 }
 
